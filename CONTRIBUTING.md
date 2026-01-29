@@ -201,7 +201,7 @@ Thank you for contributing to earthquake awareness and education!
 
 ## License
 
-By contributing, you agree that your contributions will be available under the same license as the project (see README.md for license details).
+By contributing, you agree that your contributions will be licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Additional Resources
 

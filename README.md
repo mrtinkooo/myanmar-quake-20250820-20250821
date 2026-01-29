@@ -131,7 +131,9 @@ Tested browsers:
 ```
 myanmar-quake-20250820-20250821/
 ├── index.html          # Main HTML file with embedded map and data
-└── README.md           # This documentation file
+├── README.md           # This documentation file
+├── CONTRIBUTING.md     # Contribution guidelines
+└── LICENSE             # MIT License and attributions
 ```
 
 ## Contributing
@@ -172,7 +174,9 @@ For more earthquake safety information, visit your local disaster preparedness o
 
 ## License
 
-This project is open source and available for educational and research purposes. The map data is provided by OpenStreetMap contributors under the [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+The map data is provided by OpenStreetMap contributors under the [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/).
 
 ## Acknowledgments
 
