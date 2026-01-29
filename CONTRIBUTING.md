@@ -96,7 +96,8 @@ We're always looking to improve! If you have ideas for new features:
 myanmar-quake-20250820-20250821/
 ├── index.html          # Main map visualization file
 ├── README.md           # Project documentation
-└── CONTRIBUTING.md     # This file
+├── CONTRIBUTING.md     # Contribution guidelines
+└── LICENSE             # MIT License and attributions
 ```
 
 ### Adding Earthquake Data
