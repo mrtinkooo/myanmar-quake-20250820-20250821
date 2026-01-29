@@ -1,0 +1,75 @@
+MIT License
+
+Copyright (c) 2025 Myanmar Earthquake Map Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Licenses and Attributions
+
+This project uses the following third-party libraries and resources:
+
+### Leaflet.js
+- License: BSD 2-Clause License
+- Copyright: 2010-2023, Volodymyr Agafonkin
+- Website: https://leafletjs.com/
+
+### jQuery
+- License: MIT License
+- Copyright: OpenJS Foundation and jQuery contributors
+- Website: https://jquery.com/
+
+### Bootstrap
+- License: MIT License
+- Copyright: 2011-2023 The Bootstrap Authors
+- Website: https://getbootstrap.com/
+
+### Font Awesome
+- Icons: CC BY 4.0 License
+- Fonts: SIL OFL 1.1 License
+- Code: MIT License
+- Website: https://fontawesome.com/
+
+### Leaflet.awesome-markers
+- License: MIT License
+- Copyright: 2013-2014 Lennard Voogdt
+- Website: https://github.com/lvoogdt/Leaflet.awesome-markers
+
+### OpenStreetMap
+- License: Open Database License (ODbL)
+- Copyright: OpenStreetMap contributors
+- Website: https://www.openstreetmap.org/copyright
+
+## Data Attribution
+
+Earthquake data displayed in this visualization may come from various sources:
+- Myanmar Department of Meteorology and Hydrology
+- USGS Earthquake Hazards Program
+- Regional seismological networks
+
+Please cite the appropriate data sources when using this visualization for 
+research or publication purposes.
+
+## Disclaimer
+
+This software is provided for educational and informational purposes only. 
+The earthquake data and visualizations should not be used as the sole basis 
+for emergency response or critical decision-making. Always consult official 
+sources and local authorities for accurate and timely earthquake information.

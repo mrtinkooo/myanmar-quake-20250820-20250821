@@ -1,70 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Myanmar Earthquake Map (August 20-21, 2025) -->
+    <!-- This visualization displays earthquake events in Myanmar using Leaflet.js -->
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    <title>Myanmar Earthquake Map - August 20-21, 2025</title>
+    <meta name="description" content="Interactive map showing earthquake events in Myanmar on August 20-21, 2025" />
+    <meta name="keywords" content="Myanmar, earthquake, seismic, visualization, map, Leaflet" />
     
-            <meta name="viewport" content="width=device-width,
+    <!-- External JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script> <!-- Leaflet mapping library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- jQuery for DOM manipulation -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script> <!-- Custom markers plugin -->
+    
+    <!-- External CSS Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/> <!-- Leaflet core styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/> <!-- Bootstrap glyphicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/> <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/> <!-- Awesome markers styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/> <!-- Marker rotation styles -->
+    
+    <!-- Responsive viewport configuration -->
+    <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            <style>
-                #map_3cdd3832d328bf4ee6c518bd279f9f44 {
-                    position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
-                }
-                .leaflet-container { font-size: 1rem; }
-            </style>
+    <!-- Map container styles -->
+    <style>
+        #map_3cdd3832d328bf4ee6c518bd279f9f44 {
+            position: relative;
+            width: 100.0%;
+            height: 100.0%;
+            left: 0.0%;
+            top: 0.0%;
+        }
+        .leaflet-container { font-size: 1rem; }
+    </style>
 
-            <style>html, body {
+    <!-- Full viewport layout styles -->
+    <style>html, body {
                 width: 100%;
                 height: 100%;
                 margin: 0;
                 padding: 0;
             }
-            </style>
+    </style>
 
-            <style>#map {
+    <!-- Absolute positioning for map -->
+    <style>#map {
                 position:absolute;
                 top:0;
                 bottom:0;
                 right:0;
                 left:0;
                 }
-            </style>
+    </style>
 
-            <script>
-                L_NO_TOUCH = false;
-                L_DISABLE_3D = false;
-            </script>
+    <!-- Leaflet configuration -->
+    <script>
+        L_NO_TOUCH = false;  // Enable touch events
+        L_DISABLE_3D = false; // Enable 3D transforms
+    </script>
 
-        
 </head>
 <body>
     
-    
-            <div class="folium-map" id="map_3cdd3832d328bf4ee6c518bd279f9f44" ></div>
+    <!-- Main map container -->
+    <div class="folium-map" id="map_3cdd3832d328bf4ee6c518bd279f9f44" ></div>
         
 </body>
 <script>
+    /* 
+     * EARTHQUAKE MAP INITIALIZATION AND DATA
+     * This script initializes the Leaflet map and displays earthquake markers
+     * for events that occurred in Myanmar on August 20-21, 2025
+     */
     
-    
-            var map_3cdd3832d328bf4ee6c518bd279f9f44 = L.map(
+    // Initialize the Leaflet map centered on Myanmar
+    var map_3cdd3832d328bf4ee6c518bd279f9f44 = L.map(
                 "map_3cdd3832d328bf4ee6c518bd279f9f44",
                 {
-                    center: [16.075, 96.08],
-                    crs: L.CRS.EPSG3857,
+                    center: [16.075, 96.08], // Centered on Ayeyarwady Region, Myanmar
+                    crs: L.CRS.EPSG3857, // Web Mercator projection
                     ...{
   "zoom": 6,
   "zoomControl": true,
@@ -77,8 +95,8 @@
             
 
         
-    
-            var tile_layer_479c35e40a6e1a1ff72f005d17c1826c = L.tileLayer(
+    // Add OpenStreetMap tile layer as the base map
+    var tile_layer_479c35e40a6e1a1ff72f005d17c1826c = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -97,8 +115,9 @@
     
             tile_layer_479c35e40a6e1a1ff72f005d17c1826c.addTo(map_3cdd3832d328bf4ee6c518bd279f9f44);
         
-    
-        function geo_json_019e81048fa5996a2151f90f67ffbecf_styler(feature) {
+    // GeoJSON layer for Myanmar administrative boundaries
+    // Styles the country border in red
+    function geo_json_019e81048fa5996a2151f90f67ffbecf_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "red", "fillColor": "none", "weight": 2};
@@ -128,8 +147,14 @@
     
             geo_json_019e81048fa5996a2151f90f67ffbecf.addTo(map_3cdd3832d328bf4ee6c518bd279f9f44);
         
-    
-            var circle_marker_3ee003d19c72f0ff97eb6998a345fa43 = L.circleMarker(
+    /*
+     * EARTHQUAKE EVENT 1 - August 20, 2025
+     * Magnitude: 4.8
+     * Location: ~23 miles SE of Pyapon
+     * Coordinates: 16.07°N, 95.94°E
+     * Color: Blue (indicates magnitude 4.0-4.9)
+     */
+    var circle_marker_3ee003d19c72f0ff97eb6998a345fa43 = L.circleMarker(
                 [16.07, 95.94],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.399999999999999, "stroke": true, "weight": 3}
             ).addTo(map_3cdd3832d328bf4ee6c518bd279f9f44);
@@ -150,9 +175,14 @@
         ;
 
         
-    
-    
-            var circle_marker_697edd4c87b740adccc7f2e411b749e7 = L.circleMarker(
+    /*
+     * EARTHQUAKE EVENT 2 - August 21, 2025
+     * Magnitude: 5.1
+     * Location: ~28 miles SE of Kungyangon
+     * Coordinates: 16.08°N, 96.22°E
+     * Color: Orange (indicates magnitude 5.0-5.9)
+     */
+    var circle_marker_697edd4c87b740adccc7f2e411b749e7 = L.circleMarker(
                 [16.08, 96.22],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.299999999999999, "stroke": true, "weight": 3}
             ).addTo(map_3cdd3832d328bf4ee6c518bd279f9f44);
